@@ -21,7 +21,10 @@ class TasksController < ApplicationController
     if task.update_attributes params[:task]
       redirect_to tasks_path, :notice => 'Your task has been updated!'
     else
-      redirect_to :back, :notice => "There was an error updating your content."
+      redirect_to :back, :notice => "There was an problem updating your content."
     end
+  end
+
+  def destroy
   end
 end

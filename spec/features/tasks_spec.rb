@@ -46,7 +46,7 @@ describe "Tasks" do
 
       current_path.should == edit_task_path(@task)
       find_field('Task').value.should == 'do some awesome rails stuff'
-      page.should have_content 'There was an error updating your content.'
+      page.should have_content 'There was an problem updating your content.'
     end
   end
 
