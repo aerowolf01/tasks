@@ -9,3 +9,27 @@
   border: solid 1px darken(red, 20%);
   text-align: center;
 }
+
+#content {
+  padding: 5px;
+  text-align: left;
+}
+
+body {
+  margin: 10px;
+  border: solid 2px green;
+  border-radius: 10px;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-family: Times;
+  padding-left: 40px;
+}
+
+li {
+  list-style-type: none;
+  font-family: Courier-New;
+  // border: 1px dotted blue;
+  // border-radius: 3px;
+}
