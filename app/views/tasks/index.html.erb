@@ -1,5 +1,12 @@
-<body>
-  <h1>Hello</h1>
-  <%= 'test' %>
-  <p>continue building this app</p>
-</body>
+<h1>Tasks</h1>
+<%= form_for Task.new do |f| %>
+  <%= f.label :task %>
+  <%= f.text_field :task %>
+  <%= f.submit %>
+<% end %>
+<ul>
+  <% @tasks.each do |task| %>
+    <li><%= task.task %></li>
+  <% end %>
+</ul>
+
