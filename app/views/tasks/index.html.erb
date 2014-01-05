@@ -1,12 +1,12 @@
 <h1>Tasks</h1>
-<%= form_for Task.new do |f| %>
-  <%= f.label :task %>
-  <%= f.text_field :task %>
-  <%= f.submit %>
-<% end %>
+<%= render 'form' %>
 <ul>
   <% @tasks.each do |task| %>
-    <li><%= task.task %></li>
+    <li id="task_<%= task.id %>">
+      <%= task.task %>
+      | <%= link_to 'Edit' , edit_task_path(task) %>
+      | <%= link_to 'Delete' , delete_task_path(task) %>
+    </li>
   <% end %>
 </ul>
 
