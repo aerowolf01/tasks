@@ -3,9 +3,9 @@
 <ul>
   <% @tasks.each do |task| %>
     <li id="task_<%= task.id %>">
+      <%= link_to 'Edit', edit_task_path(task) %>,
+      <%= link_to 'Delete', task, :method => 'delete' %>:
       <%= task.task %>
-      | <%= link_to 'Edit', edit_task_path(task) %>
-      | <%= link_to 'Delete', task, :method => 'delete' %>
     </li>
   <% end %>
 </ul>
