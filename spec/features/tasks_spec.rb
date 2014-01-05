@@ -53,7 +53,9 @@ describe "Tasks" do
   describe "DELETE /tasks" do
     it "deletes a task" do
       visit tasks_path
-      find("#task_#{@task.id}").click_link 'Delete Task'
+      find("#task_#{@task.id}").click_link 'Delete'
+      page.should have_content "Page has been deleted!"
+      page.should have_no_content 'do some awesome rails stuff'
     end
   end
 
