@@ -26,5 +26,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    params.permit!
+    Task.destroy params[:id]
+    redirect_to :back, :notice => 'Page has been deleted!'
   end
 end
