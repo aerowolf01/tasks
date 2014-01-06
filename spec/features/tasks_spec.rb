@@ -20,6 +20,13 @@ describe "Tasks" do
       current_path.should == tasks_path
       page.should have_content "practice ruby-foo"
     end
+
+    it 'links to home through top heading' do
+      visit tasks_path
+      click_link 'Task List'
+
+      current_path.should == tasks_path
+    end
   end
 
   describe "PUT /tasks" do
