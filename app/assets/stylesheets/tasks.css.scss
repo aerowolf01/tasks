@@ -7,14 +7,16 @@
   color: white;
   padding: 5px;
   border: solid 1px darken(red, 20%);
+  border-radius: 5px;
   text-align: center;
 }
 
 #content {
   padding: 5px;
+  font-family: sans-serif;
   text-align: left;
-  background: white;
-  border: solid 2px green;
+  background: ivory;
+  border: solid 2px brown;
   border-radius: 10px;
 }
 
@@ -24,8 +26,7 @@ form {
 
 body {
   margin: 10px;
-  font-family: sans-serif;
-  background: darken(brown, 60%);
+  background: sienna;
 }
 
 h1 {
@@ -35,7 +36,6 @@ h1 {
 
 li {
   list-style-type: none;
-  font-family: Courier-New;
 }
 
 label {
