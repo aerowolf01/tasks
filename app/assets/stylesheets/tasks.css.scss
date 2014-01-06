@@ -11,14 +11,18 @@
   text-align: center;
 }
 
-#content {
+#box {
   margin: 7px;
-  left-padding: 40px;
   font-family: sans-serif;
   text-align: left;
   background: ivory;
   border: solid 2px brown;
   border-radius: 10px;
+}
+
+#content {
+  padding-left: 40px;
+  padding-bottom: 10px;
 }
 
 #legend {
@@ -30,30 +34,19 @@
   font-size: 120%
 }
 
-#title { padding-left: 40px; }
-
 #title a { 
   text-decoration: none; 
   border-bottom: 1px solid black;
   color: darken(sienna, 15%);
 }
 
-#subtitle { padding-left: 40px; }
-
-form { padding-left: 40px; }
-
 body {
   margin: 10px;
   background: sienna;
 }
 
-h1 {
-  font-family: Times;
-}
+h1 { font-family: Times; }
 
 label { display: none; }
 
-table {
-  padding-top: 10px;
-  padding-left: 40px;
-}
+table { padding-top: 10px; }
