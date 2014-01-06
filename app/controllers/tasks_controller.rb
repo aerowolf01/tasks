@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   def index
+    @task = Task.new
     @tasks = Task.all
   end
 
@@ -11,7 +12,7 @@ class TasksController < ApplicationController
 
   def edit
     params.permit!
-    Task.find params[:id]
+    @task = Task.find params[:id]
   end
 
   def update
