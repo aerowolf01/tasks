@@ -12,7 +12,8 @@
 }
 
 #content {
-  padding: 5px;
+  margin: 7px;
+  left-padding: 40px;
   font-family: sans-serif;
   text-align: left;
   background: ivory;
@@ -48,9 +49,11 @@ body {
 
 h1 {
   font-family: Times;
-  padding-left: 40px;
 }
 
-
-li { list-style-type: none; }
 label { display: none; }
+
+table {
+  padding-top: 10px;
+  padding-left: 40px;
+}
