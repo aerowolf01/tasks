@@ -1,8 +1,16 @@
-<%= render 'form' %>
 <table>
   <tr id="legend">
     <td>Task</td>
     <td>Controls</td>
+  </tr>
+  <tr>
+    <%= form_for Task.new do |f| %>
+      <td>
+        <%= f.label :task %>
+        <%= f.text_field :task %>
+      </td>
+      <td><%= f.submit %></td>
+    <% end %>
   </tr>
   <% @tasks.each do |task| %>
     <tr id="task_<%= task.id %>">
