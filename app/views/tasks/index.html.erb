@@ -1,14 +1,17 @@
 <%= render 'form' %>
-<ul style="margin: 0px;">
-  <li id="legend">
-    Controls  | Task
-  </li>
+<table style="margin: 0px;">
+  <tr id="legend">
+    <td>Controls</td>
+    <td style="padding-left: 10px;">Task</td>
+  </tr>
   <% @tasks.each do |task| %>
-    <li id="task_<%= task.id %>">
-      <button class="edit-button"><%= link_to 'Edit', edit_task_path(task) %></button>
-      <button class="delete-button"><%= link_to 'Delete', task, :method => 'delete' %></button> |
-      <%= task.task %>
-    </li>
+    <tr id="task_<%= task.id %>">
+      <td>
+        <button class="edit-button"><%= link_to 'Edit', edit_task_path(task) %></button>
+        <button class="delete-button"><%= link_to 'Delete', task, :method => 'delete' %></button>
+      </td>
+      <td style="padding-left: 10px;"><%= task.task %></td>
+    </tr>
   <% end %>
-</ul>
+</table>
 
