@@ -13,13 +13,19 @@
 #content {
   padding: 5px;
   text-align: left;
+  background: white;
+  border: solid 2px green;
+  border-radius: 10px;
+}
+
+form {
+  padding-left: 40px;
 }
 
 body {
   margin: 10px;
-  border: solid 2px green;
-  border-radius: 10px;
   font-family: sans-serif;
+  background: darken(brown, 60%);
 }
 
 h1 {
@@ -30,6 +36,8 @@ h1 {
 li {
   list-style-type: none;
   font-family: Courier-New;
-  // border: 1px dotted blue;
-  // border-radius: 3px;
+}
+
+label {
+  display: none;
 }
