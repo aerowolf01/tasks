@@ -1,14 +1,14 @@
 <%= render 'form' %>
 <table>
   <tr id="legend">
-    <td class="date_column">Date</td>
     <td class="task_column">Task</td>
-    <td class="controls_column">Controls</td>
+    <td class="date_column">Time Ago</td>
+    <td class="time_column">Controls</td>
   </tr>
   <% @tasks.each do |task| %>
     <tr id="task_<%= task.id %>">
-      <td class="date_column"><%= task.created_at.to_date %></td>
       <td class="task_column"><%= task.task %></td>
+      <td class="time_column"><%= time_ago_in_words task.created_at %></td>
       <td class="controls_column">
         <button><%= link_to 'Edit', edit_task_path(task) %></button>
         <button><%= link_to 'Delete', task, :method => 'delete' %></button>
