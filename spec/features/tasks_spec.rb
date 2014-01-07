@@ -10,6 +10,7 @@ describe "Tasks" do
   describe "GET /tasks" do
     it 'display some tasks' do
       visit tasks_path
+
       page.should have_content "do some awesome rails stuff"
     end
 
@@ -36,7 +37,6 @@ describe "Tasks" do
       click_link 'Edit'
 
       current_path.should == edit_task_path(@task)
-
       find_field('Task').value.should == 'do some awesome rails stuff'
 
       fill_in 'Task', :with => 'Updated task'
@@ -62,6 +62,7 @@ describe "Tasks" do
     it "deletes a task" do
       visit tasks_path
       find("#task_#{@task.id}").click_link 'Delete'
+
       page.should have_content "Task has been deleted!"
       page.should have_no_content 'do some awesome rails stuff'
     end
