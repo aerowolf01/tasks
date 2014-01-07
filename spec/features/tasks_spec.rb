@@ -1,3 +1,4 @@
+# TODO: figure out why this needs to be in features
 require 'spec_helper'
 
 describe "Tasks" do
